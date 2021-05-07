@@ -19,6 +19,13 @@ public class CarController {
     
     public final static Logger logger = LoggerFactory.getLogger(CarController.class);
 
+    // get a car
+    @GetMapping("/car/{carId}")
+    public Car getCar(@PathVariable Integer carId) {
+        return carRepository.findById(carId).orElse(null);
+    }
+
+
     //get all the cars
     @GetMapping("/cars")
     public List<Car> getAllCars() {

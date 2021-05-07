@@ -14,13 +14,6 @@ public class UserController {
 
     @Autowired
     public UserRepository userRepository;
-    //privremeno
-    @Autowired
-    public CarRepository carRepository;
-    @Autowired
-    public RentRepository rentRepository;
-
-
 
     //add a user
     @PostMapping("/user")
